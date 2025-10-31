@@ -16,12 +16,11 @@ public class task2 {
             System.out.println("Некорректные данные!");
             return null;
         }
-        List<Integer> result = childSpecs;
-        for(int i = 0; i < result.size(); i++){
-            if(result.get(i) <= 0){
-                result.set(i, (parentWidth - sum) / negSpecCount * result.get(i) * -1);
+        for(int i = 0; i < childSpecs.size(); i++){
+            if(childSpecs.get(i) <= 0){
+                childSpecs.set(i, (parentWidth - sum) / negSpecCount * childSpecs.get(i) * -1);
             }
         }
-        return result;
+        return childSpecs;
     }
 }
