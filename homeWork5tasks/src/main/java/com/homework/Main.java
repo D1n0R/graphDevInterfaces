@@ -1,9 +1,20 @@
 package com.homework;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println(task1.searchInContacts("Joh",
+                new ArrayList<>(Arrays.asList("John Smith", "Mike Marley", "Hillary Cosplay", "Mark Johnson"))));
+
+        System.out.println(task1.searchInContacts("m John",
+                new ArrayList<>(Arrays.asList("John Smith", "Mike Marley", "Hillary Cosplay", "Mark Johnson"))));
+
+        System.out.println(task1.searchInContacts("keng",
+                new ArrayList<>(Arrays.asList("John Smith", "Mike Marley", "Hillary Cosplay",
+                        "Mark Johnson", "Kamil Englo", "Mjohn Kengsman", "Mjohn Keng"))));
 
         System.out.println(task2.calcChildWidths(200, Arrays.asList(-1, -1, -2))); // [50.0, 50.0, 100.0]
         System.out.println(task2.calcChildWidths(100, Arrays.asList(30, 40)));     // [30.0, 40.0]
@@ -21,6 +32,6 @@ public class Main {
         System.out.println(task5.findLongestMonotonic(Arrays.asList(2, 7, 5, 4, 4, 3)));  // (1, 3)
         System.out.println(task5.findLongestMonotonic(Arrays.asList(1, 1)));              // (1, 1)
         System.out.println(task5.findLongestMonotonic(Arrays.asList(5, 4, 3, 2, 1, 2)));  // (0, 4)
-        
+
     }
 }
