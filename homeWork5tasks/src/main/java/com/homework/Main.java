@@ -1,17 +1,14 @@
 package com.homework;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.*;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println(task1.searchInContacts("Joh",
                 new ArrayList<>(Arrays.asList("John Smith", "Mike Marley", "Hillary Cosplay", "Mark Johnson"))));
-
         System.out.println(task1.searchInContacts("m John",
                 new ArrayList<>(Arrays.asList("John Smith", "Mike Marley", "Hillary Cosplay", "Mark Johnson"))));
-
         System.out.println(task1.searchInContacts("keng",
                 new ArrayList<>(Arrays.asList("John Smith", "Mike Marley", "Hillary Cosplay",
                         "Mark Johnson", "Kamil Englo", "Mjohn Kengsman", "Mjohn Keng"))));

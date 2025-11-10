@@ -3,13 +3,26 @@ package com.homework;
 import java.util.*;
 
 public class task5 {
-    static class Pair {
+    public static class Pair {
         int start;
         int end;
 
         public Pair(int start, int end) {
             this.start = start;
             this.end = end;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Pair pair = (Pair) o;
+            return start == pair.start && end == pair.end;
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(start, end);
         }
 
         @Override
