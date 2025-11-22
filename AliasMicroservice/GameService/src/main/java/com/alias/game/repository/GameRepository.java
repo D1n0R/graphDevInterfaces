@@ -1,4 +1,7 @@
 package com.alias.game.repository;
 
-public class GameRepository {
+import com.alias.game.entity.GameEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface GameRepository extends JpaRepository<GameEntity, Long> {
 }

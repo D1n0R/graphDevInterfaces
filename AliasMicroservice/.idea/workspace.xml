@@ -4,16 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f31c28b-daf2-4eab-b8a5-d979f378647f" name="Changes" comment="Game service commit">
-      <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/alias/user/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/alias/user/entity/StatisticsEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/alias/user/entity/UserEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/alias/user/repository/StatisticsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/alias/user/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/alias/user/service/StatisticsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/alias/user/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/alias/user/util/UserMapper.java" afterDir="false" />
+    <list default="true" id="4f31c28b-daf2-4eab-b8a5-d979f378647f" name="Changes" comment="user service commit">
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/dto/CreateGameRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/dto/GameStateResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/dto/JoinGameRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/client/GameServiceClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/entity/GameEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/entity/GameEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/entity/PlayerEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/entity/PlayerEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/entity/RoundEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/entity/TeamEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/entity/TeamEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/entity/WordEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/entity/enums/GameState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/entity/enums/RoundState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/entity/enums/TeamColor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/model/CurrentTurn.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/model/GameRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/model/Round.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/model/RoundTimer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/model/ScoreBoard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/repository/GameRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/repository/GameRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/repository/PlayerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/repository/PlayerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/repository/RoundRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/repository/TeamRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/repository/TeamRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/repository/WordRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/service/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/service/GameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/service/RoomService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/service/RoundService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/service/TeamService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/service/TimerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/service/TurnService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/service/WordService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/client/GemeServiceClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/service/CallbackService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/service/CommandParserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/service/MessageBuilderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/service/TelegramService.java" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/service/TelegramService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +86,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -232,7 +259,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763815365116</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="user service commit">
+      <option name="closed" value="true" />
+      <created>1763818721671</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1763818721671</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -253,7 +288,8 @@
     <MESSAGE value="Telegram service refactoring" />
     <MESSAGE value="Telegram service commit" />
     <MESSAGE value="Game service commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Game service commit" />
+    <MESSAGE value="user service commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="user service commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
