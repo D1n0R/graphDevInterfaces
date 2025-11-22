@@ -15,6 +15,7 @@ public class TelegramService {
 
     private final GameServiceClient gameClient;
 
+    // Состояние игроков
     private final Map<Long, TelegramUserSession> sessions = new ConcurrentHashMap<>();
     private final Map<Long, Set<Long>> readyPlayers = new ConcurrentHashMap<>();
     private final Map<Long, Timer> roundTimers = new ConcurrentHashMap<>();
@@ -43,6 +44,13 @@ public class TelegramService {
         List<Long> teamIds = gameClient.getTeamIds(gameId);
         for (Long teamId : teamIds) {
             Round round = gameClient.startRound(gameId, teamId);
+            // Сохраняем загадывающего в сессиях
+            TelegramUserSession session = sessions.computeIfAbsent(round.getGuesserId(),
+                    k -> new TelegramUserSession());
+            session.setCurrentGuesserId(round.getGuesserId());
+            session.setGameId(gameId);
+            session.setTeamId(teamId);
+
             broadcastToTeam(teamId, "Раунд начинается! Загадал: " +
                     gameClient.getPlayerUsername(round.getGuesserId()));
 
@@ -62,7 +70,8 @@ public class TelegramService {
             return;
         }
 
-        sendMessageToGuesser(round.getGuesserId(), "Загадываю слово: " + word + "\n[Угадано] [Пропуск]");
+        sendMessageToGuesser(round.getGuesserId(),
+                "Загадываю слово: " + word + "\n[Угадано] [Пропуск]");
     }
 
     public void handleGuess(Long gameId) {
@@ -114,10 +123,10 @@ public class TelegramService {
     }
 
     private void sendMessage(Long telegramId, String text) {
-        // Реализация Telegram Bot API
-        // SendMessage message = new SendMessage();
-        // message.setChatId(telegramId.toString());
-        // message.setText(text);
-        // execute(message);
+        // Тут будет Telegram Bot API отправка
+        // SendMessage msg = new SendMessage();
+        // msg.setChatId(telegramId.toString());
+        // msg.setText(text);
+        // execute(msg);
     }
 }
