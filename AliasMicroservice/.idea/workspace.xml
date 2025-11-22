@@ -4,10 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f31c28b-daf2-4eab-b8a5-d979f378647f" name="Changes" comment="Telegram service init">
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/org/example/Main.java" beforeDir="false" />
+    <list default="true" id="4f31c28b-daf2-4eab-b8a5-d979f378647f" name="Changes" comment="Telegram service refactoring">
+      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/client/GemeServiceClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/client/UserServiceClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/config/TelegramConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/controller/TelegramController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/dto/GameRequests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/dto/GameResponses.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/dto/UserRequests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/dto/UserResponses.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/model/BotCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/model/TelegramUserSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/service/CommandParserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/service/MessageBuilderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/service/TelegramService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +106,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "JavaAliasMicroservice",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Projects/Java/AliasMicroservice/TelegramService/src/main/java/com/alias/bot/dto",
     "onboarding.tips.debug.path": "D:/Projects/Java/AliasMicroservice/UserService/src/main/java/org/example/Main.java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
@@ -103,6 +114,14 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\Java\AliasMicroservice\TelegramService\src\main\java\com\alias\bot\dto" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.alias.bot.client" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
@@ -193,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763813883148</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Telegram service refactoring">
+      <option name="closed" value="true" />
+      <created>1763814389758</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1763814389758</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -211,7 +238,8 @@
     <MESSAGE value="Small fixes" />
     <MESSAGE value="Alias init commit" />
     <MESSAGE value="Telegram service init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Telegram service init" />
+    <MESSAGE value="Telegram service refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Telegram service refactoring" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
