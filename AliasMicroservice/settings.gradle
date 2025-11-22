@@ -1,0 +1,5 @@
+rootProject.name = 'AliasMicroservice'
+
+include 'TelegramService'
+include 'GameService'
+include 'UserService'
