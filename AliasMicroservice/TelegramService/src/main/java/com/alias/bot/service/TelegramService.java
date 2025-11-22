@@ -14,51 +14,69 @@ import java.util.Map;
 public class TelegramService {
 
     private final GameServiceClient gameServiceClient;
-
     private final Map<Long, TelegramUserSession> sessions = new HashMap<>();
 
-    public void startGameSession(Long chatId, Long gameId, Long playerId, Long teamId) {
-        TelegramUserSession session = new TelegramUserSession();
-        session.setChatId(chatId);
+    public String createGame(Long chatId) {
+        TelegramUserSession session = getOrCreateSession(chatId);
+        Long gameId = gameServiceClient.createGame(); // создаем игру через GameService
         session.setGameId(gameId);
-        session.setPlayerId(playerId);
+        return "Игра создана! Твой gameId: " + gameId + ". Присоединяйся к команде: /join <teamId>";
+    }
+
+    public String joinTeam(Long chatId, Long teamId) {
+        TelegramUserSession session = getOrCreateSession(chatId);
         session.setTeamId(teamId);
+        Long playerId = gameServiceClient.addPlayerToTeam(session.getGameId(), teamId);
+        session.setPlayerId(playerId);
+        return "Ты присоединился к команде " + teamId + ". Начни раунд: /startround";
+    }
 
-        Round currentRound = gameServiceClient.startRound(gameId, teamId);
-        session.setCurrentRound(currentRound);
+    public String startRound(Long chatId) {
+        TelegramUserSession session = getOrCreateSession(chatId);
+        if (session.getGameId() == null || session.getTeamId() == null) {
+            return "Сначала создай игру и присоединяйся к команде!";
+        }
+        Round round = gameServiceClient.startRound(session.getGameId(), session.getTeamId());
+        session.setCurrentRound(round);
+        return "Раунд начат! Загадано первое слово.";
+    }
 
-        sessions.put(chatId, session);
+
+    private TelegramUserSession getOrCreateSession(Long chatId) {
+        return sessions.computeIfAbsent(chatId, k -> new TelegramUserSession());
     }
 
     public String guessWord(Long chatId) {
-        TelegramUserSession session = sessions.get(chatId);
-        if (session == null) return "Сессия не найдена";
+        TelegramUserSession session = getOrCreateSession(chatId);
+        Round round = session.getCurrentRound();
+        if (round == null) return "Нет активного раунда. Сначала создайте игру.";
 
-        gameServiceClient.guess(session.getGameId());
-        // Обновляем текущий раунд
-        Round round = gameServiceClient.getCurrentRound(session.getGameId());
-        session.setCurrentRound(round);
+        gameServiceClient.guess(round.getGameId());
+        round.setRoundScore(round.getRoundScore() + 1);
 
-        return "Слово угадано!";
+        return "Слово угадано! Текущий счет команды: " + round.getRoundScore();
     }
 
     public String skipWord(Long chatId) {
-        TelegramUserSession session = sessions.get(chatId);
-        if (session == null) return "Сессия не найдена";
+        TelegramUserSession session = getOrCreateSession(chatId);
+        Round round = session.getCurrentRound();
+        if (round == null) return "Нет активного раунда. Сначала создайте игру.";
 
-        gameServiceClient.skip(session.getGameId());
-        Round round = gameServiceClient.getCurrentRound(session.getGameId());
-        session.setCurrentRound(round);
+        gameServiceClient.skip(round.getGameId());
 
         return "Слово пропущено!";
     }
 
-    public Round getCurrentRound(Long chatId) {
-        TelegramUserSession session = sessions.get(chatId);
-        if (session == null) return null;
+    public String startGame(Long chatId, Long gameId, Long teamId, Long playerId) {
+        TelegramUserSession session = getOrCreateSession(chatId);
+        session.setGameId(gameId);
+        session.setTeamId(teamId);
+        session.setPlayerId(playerId);
 
-        Round round = gameServiceClient.getCurrentRound(session.getGameId());
+        Round round = gameServiceClient.startRound(gameId, teamId);
         session.setCurrentRound(round);
-        return round;
+
+        return "Раунд начат! Загадано первое слово.";
     }
+
 }

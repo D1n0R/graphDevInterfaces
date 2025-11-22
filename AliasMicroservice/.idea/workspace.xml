@@ -4,19 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f31c28b-daf2-4eab-b8a5-d979f378647f" name="Changes" comment="MEGA COMMIT">
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/alias/common/model/Round.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/TelegramBotApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="4f31c28b-daf2-4eab-b8a5-d979f378647f" name="Changes" comment="COMA COMA COMA">
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/alias/common/dto/GameDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/alias/common/dto/PlayerDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/alias/common/dto/TeamDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/TelegramBot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameService/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/GameService/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramService/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramService/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/TelegramBotApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/TelegramBotApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/client/GameServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/client/GameServiceClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/client/GameServiceClientImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/client/GameServiceClientImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/model/TelegramUserSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/model/TelegramUserSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/config/TelegramConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/config/TelegramConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/service/TelegramService.java" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/service/TelegramService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TelegramService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramService/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -291,7 +291,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763824725456</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="COMA COMA COMA">
+      <option name="closed" value="true" />
+      <created>1763825890485</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1763825890485</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -317,7 +325,8 @@
     <MESSAGE value="BIG CLEAR COMMIT" />
     <MESSAGE value="tst" />
     <MESSAGE value="MEGA COMMIT" />
-    <option name="LAST_COMMIT_MESSAGE" value="MEGA COMMIT" />
+    <MESSAGE value="COMA COMA COMA" />
+    <option name="LAST_COMMIT_MESSAGE" value="COMA COMA COMA" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

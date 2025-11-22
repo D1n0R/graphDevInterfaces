@@ -17,13 +17,31 @@ allprojects {
     repositories {
         mavenCentral()
     }
-}
 
-subprojects {
     apply plugin: 'java'
     apply plugin: 'io.spring.dependency-management'
 
     dependencies {
-        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        // Lombok для всех модулей
+        implementation 'org.projectlombok:lombok:1.18.30'
+        annotationProcessor 'org.projectlombok:lombok:1.18.30'
+
+        testImplementation 'org.projectlombok:lombok:1.18.30'
+        testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
+    }
+}
+
+subprojects {
+    afterEvaluate { project ->
+        if (project.name != "Common") {
+            dependencies {
+                testImplementation 'org.springframework.boot:spring-boot-starter-test'
+            }
+        } else {
+            // Common — чистый Java-модуль, используем только JUnit
+            dependencies {
+                testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+            }
+        }
     }
 }
