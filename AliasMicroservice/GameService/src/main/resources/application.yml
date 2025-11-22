@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://192.168.1.50:5432/alias_game
+    username: alias
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
