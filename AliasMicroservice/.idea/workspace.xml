@@ -4,20 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f31c28b-daf2-4eab-b8a5-d979f378647f" name="Changes" comment="Telegram service refactoring">
-      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/client/GemeServiceClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/client/UserServiceClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/config/TelegramConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/controller/TelegramController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/dto/GameRequests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/dto/GameResponses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/dto/UserRequests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/dto/UserResponses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/model/BotCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/model/TelegramUserSession.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/service/CommandParserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/service/MessageBuilderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/service/TelegramService.java" afterDir="false" />
+    <list default="true" id="4f31c28b-daf2-4eab-b8a5-d979f378647f" name="Changes" comment="Telegram service commit">
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/controller/GameController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/entity/GameEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/entity/PlayerEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/entity/RoundEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/entity/TeamEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/entity/WordEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/entity/enums/GameState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/entity/enums/RoundState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/entity/enums/TeamColor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/model/CurrentTurn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/model/GameRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/model/RoundTimer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/model/ScoreBoard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/repository/GameRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/repository/PlayerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/repository/RoundRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/repository/TeamRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/repository/WordRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/service/GameService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/service/RoomService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/service/RoundService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/service/TeamService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/service/TimerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/service/TurnService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/service/WordService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/util/RandomUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/util/ScoreUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/alias/user/controller/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +235,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763814389758</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Telegram service commit">
+      <option name="closed" value="true" />
+      <created>1763814811117</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1763814811117</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -239,7 +262,8 @@
     <MESSAGE value="Alias init commit" />
     <MESSAGE value="Telegram service init" />
     <MESSAGE value="Telegram service refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Telegram service refactoring" />
+    <MESSAGE value="Telegram service commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Telegram service commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
