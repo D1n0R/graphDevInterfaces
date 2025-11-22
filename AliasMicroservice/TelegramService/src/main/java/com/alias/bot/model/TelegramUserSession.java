@@ -1,17 +1,26 @@
 package com.alias.bot.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.alias.common.model.Round;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class TelegramUserSession {
+    private Long chatId;
+    private Long gameId;
+    private Long teamId;
+    private Long playerId;
+    private Round currentRound;
 
-    private Long telegramId;        // Telegram ID игрока
-    private Long gameId;            // ID текущей игры
-    private Long teamId;            // ID команды
-    private boolean ready;          // Готовность игрока
-    private Long currentGuesserId;  // ID текущего загадывающего
+    public Long getChatId() { return chatId; }
+    public void setChatId(Long chatId) { this.chatId = chatId; }
+
+    public Long getGameId() { return gameId; }
+    public void setGameId(Long gameId) { this.gameId = gameId; }
+
+    public Long getTeamId() { return teamId; }
+    public void setTeamId(Long teamId) { this.teamId = teamId; }
+
+    public Long getPlayerId() { return playerId; }
+    public void setPlayerId(Long playerId) { this.playerId = playerId; }
+
+    public Round getCurrentRound() { return currentRound; }
+    public void setCurrentRound(Round currentRound) { this.currentRound = currentRound; }
 }

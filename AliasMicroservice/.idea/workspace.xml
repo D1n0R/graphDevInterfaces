@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f31c28b-daf2-4eab-b8a5-d979f378647f" name="Changes" comment="tst">
-      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/client/GameServiceClientImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/config/TelegramConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/resources/application.yml" afterDir="false" />
+    <list default="true" id="4f31c28b-daf2-4eab-b8a5-d979f378647f" name="Changes" comment="MEGA COMMIT">
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/alias/common/model/Round.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/TelegramBotApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameService/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/GameService/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TelegramService/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramService/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/client/GameServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/client/GameServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/client/GameServiceClientImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/client/GameServiceClientImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/model/TelegramUserSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/model/TelegramUserSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/service/TelegramService.java" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/service/TelegramService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramService/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +97,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Gradle.AliasMicroservice [:TelegramService:com.alias.bot.TelegramBotApplication.main()].executor": "Run",
     "Gradle.AliasMicroservice [:org.example.Main.main()].executor": "Run",
     "Gradle.AliasMicroservice [build].executor": "Run",
     "Gradle.AliasMicroservice [clean].executor": "Run",
@@ -102,7 +108,7 @@
     "git-widget-placeholder": "JavaAliasMicroservice",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Projects/Java/AliasMicroservice/TelegramService/src/main/java/com/alias/bot/dto",
-    "onboarding.tips.debug.path": "D:/Projects/Java/AliasMicroservice/UserService/src/main/java/org/example/Main.java",
+    "onboarding.tips.debug.path": "D:/Projects/Java/AliasMicroservice/Common/src/main/java/com/alias/Main.java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -117,13 +123,26 @@
       <recent name="com.alias.bot.client" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.TelegramBotApplication">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="AliasMicroservice.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TelegramBotApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.alias.bot.TelegramBotApplication" />
+      <module name="AliasMicroservice.TelegramService.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.alias.bot.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -177,6 +196,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TelegramBotApplication" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.AliasMicroservice [build]" />
         <item itemvalue="Gradle.AliasMicroservice [clean]" />
@@ -263,7 +283,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763823929115</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="MEGA COMMIT">
+      <option name="closed" value="true" />
+      <created>1763824725456</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1763824725456</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -288,7 +316,8 @@
     <MESSAGE value="BIG CHANGES COMMIT" />
     <MESSAGE value="BIG CLEAR COMMIT" />
     <MESSAGE value="tst" />
-    <option name="LAST_COMMIT_MESSAGE" value="tst" />
+    <MESSAGE value="MEGA COMMIT" />
+    <option name="LAST_COMMIT_MESSAGE" value="MEGA COMMIT" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
