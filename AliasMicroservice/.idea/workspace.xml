@@ -4,29 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f31c28b-daf2-4eab-b8a5-d979f378647f" name="Changes" comment="BIG CHANGES COMMIT">
+    <list default="true" id="4f31c28b-daf2-4eab-b8a5-d979f378647f" name="Changes" comment="tst">
+      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/client/GameServiceClientImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/config/TelegramConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TelegramService/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/util/RandomUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/util/ScoreUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/client/UserServiceClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/config/TelegramConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/controller/TelegramController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/dto/GameRequests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/dto/GameResponses.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/dto/UserRequests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/dto/UserResponses.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/model/BotCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/model/TelegramUserSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/model/TelegramUserSession.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/util/KeyboardFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TelegramService/src/main/java/com/alias/bot/util/MessageFormatUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/alias/user/controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/alias/user/entity/StatisticsEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/alias/user/entity/UserEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/alias/user/repository/StatisticsRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/alias/user/repository/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/alias/user/service/StatisticsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/alias/user/service/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/alias/user/util/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramService/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/TelegramService/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/build.gradle" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,8 +57,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -262,7 +247,23 @@
       <option name="project" value="LOCAL" />
       <updated>1763823495565</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="BIG CLEAR COMMIT">
+      <option name="closed" value="true" />
+      <created>1763823839398</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1763823839398</updated>
+    </task>
+    <task id="LOCAL-00009" summary="tst">
+      <option name="closed" value="true" />
+      <created>1763823929115</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1763823929115</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -285,7 +286,9 @@
     <MESSAGE value="Game service commit" />
     <MESSAGE value="user service commit" />
     <MESSAGE value="BIG CHANGES COMMIT" />
-    <option name="LAST_COMMIT_MESSAGE" value="BIG CHANGES COMMIT" />
+    <MESSAGE value="BIG CLEAR COMMIT" />
+    <MESSAGE value="tst" />
+    <option name="LAST_COMMIT_MESSAGE" value="tst" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

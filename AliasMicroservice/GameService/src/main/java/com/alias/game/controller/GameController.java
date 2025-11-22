@@ -1,13 +1,11 @@
 package com.alias.game.controller;
 
-import com.alias.game.dto.CreateGameRequest;
-import com.alias.game.dto.JoinGameRequest;
-import com.alias.game.entity.GameEntity;
-import com.alias.game.entity.PlayerEntity;
 import com.alias.game.model.Round;
 import com.alias.game.service.GameService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/game")
@@ -16,44 +14,57 @@ public class GameController {
 
     private final GameService gameService;
 
-    @PostMapping("/create")
-    public GameEntity createGame(@RequestBody CreateGameRequest request) {
-        return gameService.createGame(request.getCreatorId(), request.getTeamCount());
+    // Получить текущий раунд
+    @GetMapping("/currentRound/{gameId}")
+    public Round getCurrentRound(@PathVariable Long gameId) {
+        return gameService.getCurrentRound(gameId);
     }
 
-    @PostMapping("/join")
-    public PlayerEntity joinGame(@RequestBody JoinGameRequest request) {
-        return gameService.joinGame(request.getGameId(), request.getPlayerId(), request.getUsername());
+    // Игрок угадал слово
+    @PostMapping("/guess/{gameId}")
+    public void guess(@PathVariable Long gameId) {
+        gameService.guess(gameId);
     }
 
-    @PostMapping("/shuffle")
-    public void shuffle(@RequestParam Long gameId) {
-        gameService.shuffleTeams(gameId);
+    // Игрок пропустил слово
+    @PostMapping("/skip/{gameId}")
+    public void skip(@PathVariable Long gameId) {
+        gameService.skip(gameId);
     }
 
+    // Начать раунд
     @PostMapping("/startRound")
     public Round startRound(@RequestParam Long gameId, @RequestParam Long teamId) {
         return gameService.startRound(gameId, teamId);
     }
 
-    @PostMapping("/nextWord")
-    public String nextWord(@RequestParam Long gameId) {
-        return gameService.nextWord(gameId);
+    // Получить список игроков в игре
+    @GetMapping("/players/{gameId}")
+    public List<Long> getPlayersInGame(@PathVariable Long gameId) {
+        return gameService.getPlayersInGame(gameId);
     }
 
-    @PostMapping("/guess")
-    public void guess(@RequestParam Long gameId) {
-        gameService.guess(gameId);
+    // Получить список команд
+    @GetMapping("/teams/{gameId}")
+    public List<Long> getTeamIds(@PathVariable Long gameId) {
+        return gameService.getTeamIds(gameId);
     }
 
-    @PostMapping("/skip")
-    public void skip(@RequestParam Long gameId) {
-        gameService.skip(gameId);
+    // Получить игроков в команде
+    @GetMapping("/teamPlayers/{teamId}")
+    public List<Long> getPlayerIdsInTeam(@PathVariable Long teamId) {
+        return gameService.getPlayerIdsInTeam(teamId);
     }
 
-    @GetMapping("/isFinished")
-    public boolean isFinished(@RequestParam Long gameId) {
+    // Получить username игрока
+    @GetMapping("/username/{playerId}")
+    public String getPlayerUsername(@PathVariable Long playerId) {
+        return gameService.getPlayerUsername(playerId);
+    }
+
+    // Проверка окончания игры
+    @GetMapping("/isFinished/{gameId}")
+    public boolean isGameFinished(@PathVariable Long gameId) {
         return gameService.isGameFinished(gameId);
     }
-
 }

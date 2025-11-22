@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: telegram-service
+  main:
+    allow-bean-definition-overriding: true
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
+
+telegram:
+  bot:
+    token: "ВАШ_ТОКЕН_БОТА"       # Замените на токен вашего Telegram бота
+    username: "ВАШ_ЮЗЕРНЕЙМ_БОТА" # Замените на username вашего бота
+
+game-service:
+  url: "http://localhost:8081/game" # URL вашего GameService
+
+server:
+  port: 8082  # Порт для TelegramService, можно изменить
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    com.alias.bot: DEBUG
+
+# Тайминги и игровые параметры
+game:
+  round:
+    duration-ms: 60000  # Продолжительность одного раунда в миллисекундах
+  countdown-ms: 3000     # Задержка перед стартом раунда после готовности
