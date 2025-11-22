@@ -4,35 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f31c28b-daf2-4eab-b8a5-d979f378647f" name="Changes" comment="Telegram service commit">
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/controller/GameController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/entity/GameEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/entity/PlayerEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/entity/RoundEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/entity/TeamEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/entity/WordEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/entity/enums/GameState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/entity/enums/RoundState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/entity/enums/TeamColor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/model/CurrentTurn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/model/GameRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/model/RoundTimer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/model/ScoreBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/repository/GameRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/repository/PlayerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/repository/RoundRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/repository/TeamRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/repository/WordRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/service/GameService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/service/RoomService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/service/RoundService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/service/TeamService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/service/TimerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/service/TurnService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/service/WordService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/util/RandomUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameService/src/main/java/com/alias/game/util/ScoreUtil.java" afterDir="false" />
+    <list default="true" id="4f31c28b-daf2-4eab-b8a5-d979f378647f" name="Changes" comment="Game service commit">
       <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/alias/user/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/alias/user/entity/StatisticsEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/alias/user/entity/UserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/alias/user/repository/StatisticsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/alias/user/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/alias/user/service/StatisticsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/alias/user/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/alias/user/util/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763814811117</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Game service commit">
+      <option name="closed" value="true" />
+      <created>1763815365116</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1763815365116</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -263,7 +252,8 @@
     <MESSAGE value="Telegram service init" />
     <MESSAGE value="Telegram service refactoring" />
     <MESSAGE value="Telegram service commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Telegram service commit" />
+    <MESSAGE value="Game service commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Game service commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
