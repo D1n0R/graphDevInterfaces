@@ -1,19 +1,25 @@
-plugins {
-    id 'java'
+allprojects {
+    group = 'com.alias'
+    version = '1.0-SNAPSHOT'
+
+    repositories {
+        mavenCentral()
+    }
 }
 
-group = 'src'
-version = '1.0-SNAPSHOT'
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'application'
 
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
-}
-
-test {
-    useJUnitPlatform()
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(21)
+        }
+    }
+    dependencies {
+        testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+    }
+    test {
+        useJUnitPlatform()
+    }
 }
