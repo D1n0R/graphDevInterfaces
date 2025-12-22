@@ -1,0 +1,4 @@
+rootProject.name = 'alias-microservices'
+include 'bot-service'
+include 'user-service'
+include 'team-service'
