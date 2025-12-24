@@ -1,0 +1,11 @@
+bot:
+  token:
+  username: yarsu_alias_bot
+
+users:
+  service:
+    url: http://localhost:8081
+
+teams:
+  service:
+    url: http://localhost:8082
