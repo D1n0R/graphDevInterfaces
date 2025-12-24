@@ -15,6 +15,7 @@ public class TeamsClient {
     @Value("${teams.service.url}")
     private String baseUrl;
 
+    // Создать команды
     public List<Map<String, Object>> generateTeams(List<Long> userIds, int teamsCount) {
         return rest.postForObject(
                 baseUrl + "/teams/generate?teamsCount=" + teamsCount,
@@ -23,10 +24,17 @@ public class TeamsClient {
         );
     }
 
+    // Получить команды (id, name, score)
+    public List<Map<String, Object>> getTeams() {
+        return rest.getForObject(baseUrl + "/teams", List.class);
+    }
+
+    // Начислить очко команде
     public void addScore(Long teamId) {
         rest.postForLocation(baseUrl + "/teams/" + teamId + "/score", null);
     }
 
+    // Получить новое слово
     public String word() {
         return rest.postForObject(baseUrl + "/game/word", null, String.class);
     }

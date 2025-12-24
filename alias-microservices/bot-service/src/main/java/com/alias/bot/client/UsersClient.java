@@ -15,6 +15,7 @@ public class UsersClient {
     @Value("${users.service.url}")
     private String baseUrl;
 
+    // Регистрация пользователя
     public void register(Long telegramId, String name) {
         rest.postForObject(
                 baseUrl + "/users",
@@ -23,6 +24,7 @@ public class UsersClient {
         );
     }
 
+    // Список всех пользователей
     public List<Map<String, Object>> users() {
         return rest.getForObject(baseUrl + "/users", List.class);
     }
